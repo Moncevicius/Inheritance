@@ -5,7 +5,7 @@ class BaseES6 {
     }
 }
 
-//
+//IntBuilder class with methods
 class IntBuilder extends BaseES6{
     constructor(value) {
         super(value);
