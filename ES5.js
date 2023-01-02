@@ -1,13 +1,15 @@
+// base class containing value
 function BaseES5(value){
     this.value = value || '';
 }
 
+// StringBuilder class containing methods
 function StringBuilder(value){
     BaseES5.call(this, value);
 
     // takes infinite number of strings and concat with stored string;
-    this.plus = function(...n) {
-        this.value += n.join('');
+    this.plus = function(...str) {
+        this.value += str.join('');
         return this;
     }
 
@@ -22,12 +24,12 @@ function StringBuilder(value){
     }
 
     // repeat stored strings n times; Prohibited to use String.prototype.repeat();
-    this.multiply = function(n){
+    this.multiply = function(int){
         if (!this.value) {
             throw Error; //empty string
         } else {
             let subStr = '';
-            for (let i = 0; i < n; i++) {
+            for (let i = 0; i < int; i++) {
                 subStr += this.value;
             }
             this.value = subStr;
@@ -47,11 +49,11 @@ function StringBuilder(value){
     }
 
     // remove taken string str from stored; Prohibited to use String.prototype.replace();
-    this.remove = function(n){
+    this.remove = function(str){
         if (!this.value) {
             throw Error; //empty string
         } else {
-            this.value = this.value.split(n).join('');
+            this.value = this.value.split(str).join('');
             return this;
         }
     }
