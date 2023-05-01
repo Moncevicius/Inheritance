@@ -1,11 +1,11 @@
 
-    Create a 2 identical base classes (one in ES6 and on in ES5) that will contain common methods (so that you can experiment how each JS edition implements inheritance).
-    Then create 2 child classes (inherit from base): IntBuilder in ES6 style and StringBuilder in ES5 style. (There should be 4 classes in total!)
-    Almost all methods should be chainable for handy usage.
-    You can add any own methods and properties to the classes BUT! methods described bellow must be in your solution
+* Create a 2 identical base classes (one in ES6 and on in ES5) that will contain common methods (so that you can experiment how each JS edition implements inheritance).
+* Then create 2 child classes (inherit from base): IntBuilder in ES6 style and StringBuilder in ES5 style. **(There should be 4 classes in total!)**
+* Almost all methods should be **chainable** for handy usage.
+* You can add any own methods and properties to the classes **BUT!** methods described bellow must be in your solution
 
-ES6 class IntBuilder:
-
+#### ES6 class IntBuilder:
+```javascript
 // API:
 new IntBuilder(int) // constructor takes starting integer, if not passed starts with 0;
 .plus(...n)         // take infinite number of integers and sum all with stored value;
@@ -28,9 +28,10 @@ intBuilder
   .divide(4)                         // stored value 7, returns object for further chaining;
   .mod(3)                            // stored value 1, returns object for further chaining;
   .get();                            // returns stored value 1;
+```
 
-ES5 class StringBuilder
-
+#### ES5 class StringBuilder
+```javascript
 // API:
 
 new StringBuilder(str)   // constructor takes starting string, if not passed starts with '';
@@ -52,3 +53,4 @@ strBuilder
   .remove('l')                               // stored value 'He', returns object for further chaining
   .sub(1,1)                                  // stored value 'e', returns object for further chaining
   .get();                                    // returns stored value 'e';
+```
